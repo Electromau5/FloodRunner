@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all.order('name ASC')
+    @people = Person.all.order('name ASC').paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /people/1
@@ -69,6 +69,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name, :description, :location, :image)
+      params.require(:person).permit(:name, :description, :location, :image, :contact)
     end
 end
