@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :logistics
   resources :fuels
-  resources :people
   resources :posts
 
   root 'posts#index'
