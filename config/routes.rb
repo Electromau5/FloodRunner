@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :medicines
   resources :logistics
   resources :fuels
   resources :posts
