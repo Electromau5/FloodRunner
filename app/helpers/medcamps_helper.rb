@@ -1,0 +1,2 @@
+module MedcampsHelper
+end

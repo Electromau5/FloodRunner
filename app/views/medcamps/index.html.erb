@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medical Camps</h1>
+<p>Upcoming medical camps.</p>
+
+<table class="table table-striped table-bordered">
+  <tr>
+    <th class="center">Location</th>
+    <th class="center">Organiser</th>
+    <th class="center">Contact</th>
+    <th class="center">Date</th>
+    <th class="center">Additional Info</th>
+    <th class="center">Action</th>
+   </tr>
+  <thead>
+  </thead>
+
+  <tbody>
+    <% @medcamps.each do |m| %>
+      <tr>
+        <td><%= m.location %></td>
+        <td><%= m.organiser %></td>
+        <td><%= m.contact %></td>
+        <td><%= m.date %></td>
+        <td><%= m.info %></td>
+        <td>
+        <%= link_to "Update",edit_medcamp_path(m), class: "btn btn-link" %>
+        <%= link_to "Delete",m, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-link" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add Medical Camp', new_medcamp_path, class: "btn btn-link" %>
+<div class="center">
+   <%= will_paginate @docs, renderer: BootstrapPagination::Rails %>
+</div>
+

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @medcamp.location %>
+</p>
+
+<p>
+  <strong>Organiser:</strong>
+  <%= @medcamp.organiser %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @medcamp.contact %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @medcamp.date %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @medcamp.info %>
+</p>
+
+<%= link_to 'Edit', edit_medcamp_path(@medcamp) %> |
+<%= link_to 'Back', medcamps_path %>
