@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151210141317) do
+ActiveRecord::Schema.define(version: 20151210225703) do
 
   create_table "docs", force: :cascade do |t|
     t.string   "name"
@@ -19,27 +19,6 @@ ActiveRecord::Schema.define(version: 20151210141317) do
     t.text     "contact"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "doctors", force: :cascade do |t|
-    t.string   "name"
-    t.string   "location"
-    t.integer  "contact"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "fuels", force: :cascade do |t|
-    t.string   "location"
-    t.string   "time"
-    t.string   "supply"
-    t.string   "date"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
   end
 
   create_table "medcamps", force: :cascade do |t|
@@ -60,16 +39,20 @@ ActiveRecord::Schema.define(version: 20151210141317) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "location"
-    t.text     "description"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "diversion"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+  create_table "miscs", force: :cascade do |t|
+    t.text     "subject"
+    t.text     "details"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "vaccines", force: :cascade do |t|
+    t.text     "disease"
+    t.text     "location"
+    t.text     "contact"
+    t.text     "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  disease: MyText
+  location: MyText
+  contact: MyText
+  info: MyText
+
+two:
+  disease: MyText
+  location: MyText
+  contact: MyText
+  info: MyText

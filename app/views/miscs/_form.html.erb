@@ -1,0 +1,24 @@
+<%= form_for(@misc) do |f| %>
+  <% if @misc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@misc.errors.count, "error") %> prohibited this misc from being saved:</h2>
+
+      <ul>
+      <% @misc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :subject %><br>
+    <%= f.text_area :subject, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :details %><br>
+    <%= f.text_area :details, class: "form-control" %>
+  </div>
+  <div class="form-group">
+  <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

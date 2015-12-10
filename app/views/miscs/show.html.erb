@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @misc.subject %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @misc.details %>
+</p>
+
+<%= link_to 'Edit', edit_misc_path(@misc) %> |
+<%= link_to 'Back', miscs_path %>
