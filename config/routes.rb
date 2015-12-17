@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :supply2s
+  resources :supplies
   resources :vaccines
   resources :miscs
   resources :medcamps

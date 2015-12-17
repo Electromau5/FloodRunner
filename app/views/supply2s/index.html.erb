@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Supply2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Material</th>
+      <th>Location</th>
+      <th>Contact</th>
+      <th>Info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supply2s.each do |supply2| %>
+      <tr>
+        <td><%= supply2.material %></td>
+        <td><%= supply2.location %></td>
+        <td><%= supply2.contact %></td>
+        <td><%= supply2.info %></td>
+        <td><%= link_to 'Show', supply2 %></td>
+        <td><%= link_to 'Edit', edit_supply2_path(supply2) %></td>
+        <td><%= link_to 'Destroy', supply2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supply2', new_supply2_path %>

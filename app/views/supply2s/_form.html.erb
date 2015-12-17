@@ -1,0 +1,33 @@
+<%= form_for(@supply2) do |f| %>
+  <% if @supply2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@supply2.errors.count, "error") %> prohibited this supply2 from being saved:</h2>
+
+      <ul>
+      <% @supply2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :material %><br>
+    <%= f.text_area :material %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br>
+    <%= f.text_area :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :info %><br>
+    <%= f.text_area :info %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
